@@ -1,0 +1,48 @@
+# this file only contains machine level ignores. this is for the purpose of
+# making project level ignore files project specific.
+
+# anyone using OSX just ignore this
+.DS_Store
+
+# Ignoring temporary dot directories
+/.CFUserTextEncoding
+/.NERDTreeBookmarks
+/.Trash
+/.bash_history
+/.bash_sessions
+/.bundle
+/.bundler
+/.cache
+/.config/gtk-2.0
+/.cups
+/.docker
+/.gem
+/.lesshst
+/.local
+/.netrc
+/.ssh
+/.tldrc
+/.vagrant.d
+/.viminfo
+
+# Ignoring application created directories
+/Dropbox
+/VirtualBox VMs
+
+# Ignoring standard OSX directories
+/Applications
+/Desktop
+/Documents
+/Downloads
+/Library
+/Movies
+/Music
+/Pictures
+/Public
+
+# This is created my the bootstrap script
+/.config/osx-homedir/.softwareupdate_indicator
+/.config/osx-homedir/birthdate
+
+# Where rubys are installed via ruby-install
+/.rubies
