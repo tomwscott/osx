@@ -24,6 +24,7 @@
 /.tldrc
 /.vagrant.d
 /.viminfo
+/.sdkman
 
 # Ignoring application created directories
 /Dropbox
@@ -41,8 +42,8 @@
 /Public
 
 # This is created my the bootstrap script
-/.config/osx-homedir/.softwareupdate_indicator
-/.config/osx-homedir/birthdate
+/.config/.softwareupdate_indicator
+/.config/birthdate
 
 # Where rubys are installed via ruby-install
 /.rubies

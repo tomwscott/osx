@@ -1,0 +1,7 @@
+cask 'alfred'
+cask 'dashlane'
+cask 'google-chrome'
+cask 'istat-menus'
+cask 'jetbrains-toolbox'
+cask 'little-snitch'
+cask 'visual-studio-code'
