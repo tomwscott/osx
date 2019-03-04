@@ -1,6 +1,10 @@
+brew 'go'
+
 cask 'alfred'
+cask 'arq'
 cask 'dashlane'
 cask 'google-chrome'
+cask 'google-cloud-sdk'
 cask 'istat-menus'
 cask 'jetbrains-toolbox'
 cask 'little-snitch'
