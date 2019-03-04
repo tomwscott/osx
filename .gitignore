@@ -25,6 +25,7 @@
 /.vagrant.d
 /.viminfo
 /.sdkman
+/.config/gcloud
 
 # Ignoring application created directories
 /Dropbox
