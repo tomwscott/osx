@@ -27,7 +27,7 @@ alias q="exit"
 
 export EDITOR="vim -f"
 
-PS1="\[${VIOLET}\]\\w \[${GREEN}\]? \[${RESET}\]"
+PS1="\[${WHITE}\]\\u\[$BRIGHT_BLUE\]@\h:\[$BRIGHT_RED\]\w \[${RESET}\]"
 
 if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
