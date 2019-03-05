@@ -26,6 +26,12 @@
 /.viminfo
 /.sdkman
 /.config/gcloud
+/.vscode
+/.android
+/.cocoapods
+/.dart
+/.dartServer
+/.flutter
 
 # Ignoring application created directories
 /Dropbox
@@ -48,3 +54,6 @@
 
 # Where rubys are installed via ruby-install
 /.rubies
+
+/go
+/development
