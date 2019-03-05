@@ -2,6 +2,7 @@ BIN_DIRECTORY=${HOME}/.bin
 
 source ${BIN_DIRECTORY}/colours.bash
 source ${BIN_DIRECTORY}/git_completion.bash
+source ${BIN_DIRECTORY}/prompt.bash
 
 # ~/bin is the location of personal scripts I would like available everywhere
 export PATH="${BIN_DIRECTORY}:$PATH"
@@ -28,27 +29,5 @@ alias q="exit"
 
 export EDITOR="vim -f"
 
-function prompt_right() {
-  echo -e "\[${WHITE}\][\\\t]"
-}
 
-function prompt_left() {
-  echo -e "\[${WHITE}\]\\u\[$BRIGHT_BLUE\]@\h:\[$BRIGHT_RED\]\w\[${RESET}\]"
-}
-
-function prompt() {
-    compensate=5
-    PS1=$(printf "%*s\r%s\n> $ " "$(($(tput cols)+${compensate}))" "$(prompt_right)" "$(prompt_left)")
-}
-PROMPT_COMMAND=prompt
-
-PS1="\[${WHITE}\]\\u\[$BRIGHT_BLUE\]@\h:\[$BRIGHT_RED\]\w \[${RESET}\]"
-
-if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
-  source /usr/local/opt/chruby/share/chruby/chruby.sh
-fi
-
-if [ -f /usr/local/etc/profile.d/autojump.sh ]; then
-  source /usr/local/etc/profile.d/autojump.sh
-fi
 
