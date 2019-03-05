@@ -10,6 +10,7 @@ main() {
 #  configure_tap_to_click
   invoke_softewareupdate
   invoke_sdkman
+  configure_osx_preferences
 }
 
 write_or_check_machine_birthdate() {
@@ -96,6 +97,10 @@ configure_tap_to_click() {
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
   defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
   defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+}
+
+configure_osx_preferences() {
+  defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 }
 
 main
