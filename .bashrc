@@ -5,6 +5,7 @@ source ${BIN_DIRECTORY}/git_completion.bash
 
 # ~/bin is the location of personal scripts I would like available everywhere
 export PATH="${BIN_DIRECTORY}:$PATH"
+export PATH="${HOME}/development/flutter/bin:$PATH"
 
 # need this set to xterm-256color to get proper color support in vim
 export TERM='xterm-256color'
@@ -26,6 +27,20 @@ shopt -s histappend
 alias q="exit"
 
 export EDITOR="vim -f"
+
+function prompt_right() {
+  echo -e "\[${WHITE}\][\\\t]"
+}
+
+function prompt_left() {
+  echo -e "\[${WHITE}\]\\u\[$BRIGHT_BLUE\]@\h:\[$BRIGHT_RED\]\w\[${RESET}\]"
+}
+
+function prompt() {
+    compensate=5
+    PS1=$(printf "%*s\r%s\n> $ " "$(($(tput cols)+${compensate}))" "$(prompt_right)" "$(prompt_left)")
+}
+PROMPT_COMMAND=prompt
 
 PS1="\[${WHITE}\]\\u\[$BRIGHT_BLUE\]@\h:\[$BRIGHT_RED\]\w \[${RESET}\]"
 
