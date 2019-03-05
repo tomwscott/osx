@@ -32,6 +32,11 @@
 /.dart
 /.dartServer
 /.flutter
+/.gcp
+/.kube
+/.gradle
+/.m2
+
 
 # Ignoring application created directories
 /Dropbox
