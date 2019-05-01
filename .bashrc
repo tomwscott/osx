@@ -6,7 +6,10 @@ source ${BIN_DIRECTORY}/prompt.bash
 
 # ~/bin is the location of personal scripts I would like available everywhere
 export PATH="${BIN_DIRECTORY}:$PATH"
-export PATH="${HOME}/development/flutter/bin:$PATH"
+export PATH="$PATH":"${HOME}/development/flutter/bin"
+export PATH="$PATH":"$HOME/development/flutter/bin/cache/dart-sdk/bin/"
+export PATH="$PATH":"$HOME/development/flutter/.pub-cache/bin"
+export PATH="$HOME/.rubies/ruby-2.6.1/bin/":$PATH
 
 # need this set to xterm-256color to get proper color support in vim
 export TERM='xterm-256color'
