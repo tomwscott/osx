@@ -20,6 +20,7 @@
 /.lesshst
 /.local
 /.netrc
+/.rubies
 /.ssh
 /.tldrc
 /.vagrant.d
@@ -36,7 +37,12 @@
 /.kube
 /.gradle
 /.m2
-
+/.fastlane/
+/.gsutil/
+/.subversion/
+/.terraform.d/
+/.tfw/
+/.tg/
 
 # Ignoring application created directories
 /Dropbox
@@ -60,5 +66,8 @@
 # Where rubys are installed via ruby-install
 /.rubies
 
+Creative Cloud Files/
+Virtual Machines.localized/
+.itmstransporter/
 /go
 /development
