@@ -70,4 +70,17 @@ Creative Cloud Files/
 Virtual Machines.localized/
 .itmstransporter/
 /go
-/development
+/development/**
+
+.config/configstore/
+.node-gyp/
+.node_repl_history
+.npm/
+.nvm/
+.oh-my-zsh/
+.yarnrc
+.zcompdump
+.zcompdump-eratosthenes-5.3
+.zcompdump-eratosthenes-5.7.1
+.zsh_history
+.zshrc.pre-oh-my-zsh
