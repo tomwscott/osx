@@ -1,10 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
 export PATH="${BIN_DIRECTORY}:$PATH"
 export PATH="$PATH":"${HOME}/development/flutter/bin"
 export PATH="$PATH":"$HOME/development/flutter/bin/cache/dart-sdk/bin/"
 export PATH="$PATH":"$HOME/development/flutter/.pub-cache/bin"
+export PATH="$PATH":"/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/"
 export PATH="$HOME/.rubies/ruby-2.6.1/bin/":$PATH
+
+export GOPATH="$HOME/development/go"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

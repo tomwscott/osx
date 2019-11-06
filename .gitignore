@@ -73,6 +73,8 @@ Virtual Machines.localized/
 /development/**
 
 .config/configstore/
+.config/gatsby/
+.config/yarn/
 .node-gyp/
 .node_repl_history
 .npm/
@@ -84,3 +86,9 @@ Virtual Machines.localized/
 .zcompdump-eratosthenes-5.7.1
 .zsh_history
 .zshrc.pre-oh-my-zsh
+
+.gitbook/
+.konan/
+.pylint.d/
+.tvm/
+.v8flags.7.4.288.21-node.16.59ee68c93598876cbe7e6462cf676e62.json
