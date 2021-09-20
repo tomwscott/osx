@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
@@ -7,12 +14,8 @@ export PATH="$PATH":"$HOME/development/flutter/bin/cache/dart-sdk/bin/"
 export PATH="$PATH":"$HOME/development/flutter/.pub-cache/bin"
 export PATH="$PATH":"/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/"
 export PATH="$HOME/.rubies/ruby-2.6.1/bin/":$PATH
-
+export PATH="$HOME/.poetry/bin":$PATH
 export GOPATH="$HOME/development/go"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/tomwscott/.oh-my-zsh"
@@ -21,7 +24,8 @@ export ZSH="/Users/tomwscott/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bureau"
+# ZSH_THEME="bureau"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,7 +79,15 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	asdf 
+	brew 
+	docker 
+	fzf
+	git 
+	gcloud
+	zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,6 +117,24 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias python=/usr/local/bin/python3
+alias vi=vim
+alias ls="exa -la --icons"
+
+function wp() {
+  lsof -nP -iTCP:$1 | grep LISTEN
+}
 
 export SDKMAN_DIR="/Users/tomwscott/.sdkman"
 [[ -s "/Users/tomwscott/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/tomwscott/.sdkman/bin/sdkman-init.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tomwscott/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tomwscott/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tomwscott/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tomwscott/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+. /usr/local/opt/asdf/asdf.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
